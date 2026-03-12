@@ -48,7 +48,7 @@ a {
   top: 0;
   z-index: 10;
   backdrop-filter: blur(14px);
-  background: rgba(246, 239, 230, 0.9);
+  background: rgba(246, 239, 230, 0.96);
   border-bottom: 1px solid var(--line);
 }
 
@@ -57,17 +57,21 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 0;
+  padding: 12px 0;
 }
 
 .brand img {
-  width: 180px;
+  width: 106px;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 42px;
   font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .hero {
@@ -194,27 +198,27 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 22px 0;
+  gap: 46px;
+  padding: 18px 0;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
+  gap: 12px;
+  padding: 6px 0;
   text-align: left;
 }
 
 .feature-item strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-family: "Playfair Display", serif;
 }
 
 .feature-item span {
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.72rem;
 }
 
 .info-bar {
@@ -277,13 +281,13 @@ h2 {
 .photo-card {
   position: relative;
   overflow: hidden;
-  border-radius: 24px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
 }
 
 .photo-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 288px;
   object-fit: cover;
 }
 
@@ -292,10 +296,10 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 24px 20px 18px;
+  padding: 24px 18px 16px;
   color: white;
   font-family: "Playfair Display", serif;
-  font-size: 1.45rem;
+  font-size: 1.2rem;
   font-weight: 700;
   background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.55));
 }
@@ -446,6 +450,8 @@ h2 {
 
   .nav-links {
     flex-wrap: wrap;
+    gap: 18px;
+    font-size: 0.8rem;
   }
 
   .hero-grid {
