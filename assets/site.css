@@ -81,11 +81,11 @@ a {
 .hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
-  gap: 40px;
+  grid-template-columns: 5fr 7fr;
+  gap: 32px;
   align-items: center;
-  min-height: 720px;
-  padding: 72px 0;
+  min-height: 80svh;
+  padding: 64px 0 48px;
 }
 
 .hero-copy {
@@ -115,7 +115,9 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  line-height: 1.1;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -147,9 +149,9 @@ h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 52px;
-  padding: 0 24px;
-  border-radius: 999px;
+  min-height: 56px;
+  padding: 0 32px;
+  border-radius: 10px;
   font-weight: 700;
   transition: 0.2s ease;
 }
@@ -164,9 +166,12 @@ h2 {
 }
 
 .button.secondary {
-  background: rgba(255, 255, 255, 0.14);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: #ece6de;
+  color: var(--ink);
+}
+
+.button.secondary:hover {
+  background: #e2dad1;
 }
 
 .hero-card img {
@@ -186,26 +191,30 @@ h2 {
 }
 
 .feature-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 22px 0;
 }
 
 .feature-item {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  text-align: left;
 }
 
 .feature-item strong {
-  font-size: 1rem;
+  display: block;
+  font-size: 0.95rem;
+  font-family: "Playfair Display", serif;
 }
 
 .feature-item span {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.78rem;
 }
 
 .info-bar {
@@ -238,17 +247,23 @@ h2 {
   text-align: center;
 }
 
-.menu-grid,
 .reviews-grid,
 .footer-grid {
   display: grid;
   gap: 24px;
 }
 
-.menu-grid,
 .reviews-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 36px;
+}
+
+.menu-intro {
+  max-width: 55ch;
+  margin: 16px auto 0;
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.65;
 }
 
 .card,
@@ -285,20 +300,21 @@ h2 {
 .menu-categories {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 48px 24px;
   margin-top: 32px;
 }
 
 .menu-category {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 24px;
-  box-shadow: var(--shadow);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 .menu-category h3 {
-  margin-bottom: 14px;
+  margin-bottom: 24px;
+  font-size: 1.7rem;
 }
 
 .menu-category ul {
@@ -311,14 +327,19 @@ h2 {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  padding: 10px 0;
-  border-top: 1px solid var(--line);
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-top: 0;
   color: var(--muted);
+  background: #eee6dd;
+  border-radius: 16px;
+  margin-bottom: 12px;
 }
 
-.menu-category li:first-child {
-  border-top: 0;
-  padding-top: 0;
+.menu-category li p {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .menu-category em {
@@ -326,6 +347,12 @@ h2 {
   font-style: normal;
   font-weight: 700;
   white-space: nowrap;
+}
+
+.menu-category strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1rem;
 }
 
 .menu-note a {
@@ -371,7 +398,6 @@ h2 {
   .hero-grid,
   .info-grid,
   .feature-grid,
-  .menu-grid,
   .menu-categories,
   .reviews-grid,
   .footer-grid {
@@ -389,5 +415,11 @@ h2 {
 
   .hero-grid {
     min-height: auto;
+  }
+
+  .feature-item {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
   }
 }
